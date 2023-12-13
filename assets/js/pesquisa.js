@@ -232,7 +232,9 @@ async function carregarPagina() {
   };
 
   // Configura a URL de busca na API
-  var urlBusca = "https://www.virustotal.com/api/v3/domains/" + dominio;
+  var urlBusca =
+    "https://justcors.com/tl_6428a3c/https://www.virustotal.com/api/v3/domains/" +
+    dominio;
 
   // Realizar a requisição Fetch
   const req = await fetch(urlBusca, options);
