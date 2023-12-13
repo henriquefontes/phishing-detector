@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/main-style.css" />
+    <link rel="stylesheet" href="/assets/css/signin.css" />
+    <title>Phishing Detector - Login</title>
+  </head>
+  <body>
+    <div class="main-login">
+      <div class="login">
+        <div class="card-login">
+          <form id="login">
+            <h1>LOGIN</h1>
+            <div class="textfield">
+              <input
+                type="text"
+                id="usuario"
+                placeholder="Usuário/CNPJ"
+                required
+              />
+            </div>
+            <div class="textfield">
+              <input type="password" id="senha" placeholder="Senha" required />
+            </div>
+            <p>
+              Não possui conta?
+              <a href="./signupUser.html" style="text-decoration: underline">
+                Cadastre-se</a
+              >
+              <!-- |
+              Esqueceu sua senha?
+              <a href="./forgetPassword.html"> Clique aqui</a> -->
+            </p>
+            <button class="btn-login" id="btnlogin">LOGIN</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrapper">
+      <div class="modal loading" data-modal="carregamento">
+        <img src="assets/img/loading.gif" />
+        <h3>Pescando Informações</h3>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/layout.js"></script>
+    <script src="/assets/js/signin.js"></script>
+  </body>
+</html>

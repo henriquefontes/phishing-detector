@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/main-style.css" />
+    <link rel="stylesheet" href="/assets/css/signupCompany.css" />
+    <title>Phishing Detector - Cadastro</title>
+  </head>
+  <body>
+    <form id="formSignUpUser">
+      <div class="main-login">
+        <div class="login">
+          <div class="linkfield">
+            <a href="./signupUser.html" id="linkCompany">Usuário</a>
+            <a href="./signupCompany.html" style="text-decoration: underline"
+              >Empresa</a
+            >
+          </div>
+          <div class="card-login">
+            <h1>CADASTRO</h1>
+            <div class="textfield">
+              <input type="text" id="cnpj" placeholder="CNPJ" required />
+            </div>
+            <div class="textfield">
+              <input type="text" id="nome" placeholder="Nome" required />
+            </div>
+            <div class="textfield">
+              <input type="email" id="email" placeholder="Email" required />
+            </div>
+            <div class="textfield">
+              <input type="password" id="senha" placeholder="Senha" required />
+            </div>
+            <div class="center-content">
+              <p>
+                Já possui conta?
+                <a href="/login.html" style="text-decoration: underline"
+                  >Clique aqui</a
+                >
+              </p>
+            </div>
+            <button class="btn-login">CADASTRAR</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="modal-wrapper">
+      <div class="modal loading" data-modal="carregamento">
+        <img src="assets/img/loading.gif" />
+        <h3>Pescando Informações</h3>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/layout.js"></script>
+    <script src="/assets/js/signupCompany.js"></script>
+  </body>
+</html>

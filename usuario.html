@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main-style.css" />
+    <link rel="stylesheet" href="assets/css/usuario-page.css" />
+    <title>Phishing Detector</title>
+  </head>
+  <body>
+    <div class="mobile-menu-wrapper">
+      <div class="mobile-menu-container">
+        <div class="mobile-menu-header">
+          <h1 class="logo">
+            <a href="#">Phishing<span>Detector</span></a>
+          </h1>
+          <div
+            class="logged-user-container mobile"
+            data-visible="is-user-logged"
+          >
+            <img
+              src=""
+              class="usuario-image logged-user-image mobile-user-image"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+        <div class="mobile-menu-items-container">
+          <ul class="mobile-logged-user-menu" data-visible="is-user-logged">
+            <li class="mobile-logged-user-action">
+              <a href="" class="my-profile"
+                ><i class="bx bxs-user"></i><span>Meu Perfil</span></a
+              >
+            </li>
+            <li class="mobile-logged-user-action" data-visible="is-user-admin">
+              <a href="admin.html"
+                ><i class="bx bxs-cog"></i><span>Administração</span></a
+              >
+            </li>
+            <li class="mobile-logged-user-action">
+              <a id="logout" href="#"
+                ><i class="bx bxs-exit"></i><span>Sair</span></a
+              >
+            </li>
+          </ul>
+          <a
+            class="button"
+            id="loginBtn"
+            style="margin: 0; width: 100%"
+            href="login.html"
+            data-visible="is-user-unlogged"
+            >Login</a
+          >
+          <hr
+            style="
+              margin: 40px auto;
+              width: 98%;
+              border: 1px solid var(--primary-color);
+            "
+          />
+          <a href="#about-us">Sobre Nós</a>
+          <a href="#our-blog">Blog</a>
+          <a href="#ranking">Links Confiáveis</a>
+        </div>
+        <i class="bx bx-menu-alt-left close-mobile-menu"></i>
+      </div>
+    </div>
+    <header>
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html">Phishing<span>Detector</span></a>
+        </h1>
+        <nav>
+          <div class="desktop-menu">
+            <a href="index.html#about-us">Sobre Nós</a>
+            <a href="index.html#our-blog">Blog</a>
+            <a href="index.html#ranking">Links Confiáveis</a>
+            <a
+              class="button"
+              id="loginBtn"
+              style="margin-left: 20px"
+              href="login.html"
+              data-visible="is-user-unlogged"
+              >Login</a
+            >
+            <div class="logged-user-container" data-visible="is-user-logged">
+              <img
+                src=""
+                class="usuario-image logged-user-image"
+                style="cursor: pointer"
+              />
+              <ul class="logged-user-actions d-none">
+                <li class="logged-user-action">
+                  <a href="" class="my-profile"
+                    ><i class="bx bxs-user"></i><span>Meu Perfil</span></a
+                  >
+                </li>
+                <li class="logged-user-action" data-visible="is-user-admin">
+                  <a href="admin.html"
+                    ><i class="bx bxs-cog"></i><span>Administração</span></a
+                  >
+                </li>
+                <li class="logged-user-action">
+                  <a id="logout" href="#"
+                    ><i class="bx bxs-exit"></i><span>Sair</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mobile-menu">
+            <i class="bx bx-menu-alt-right mobile-menu-icon"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="container full-container">
+        <main>
+          <div class="usuario-top">
+            <div class="usuario-image-container">
+              <img src="" alt="" class="usuario-image" />
+              <div
+                class="edit-icon-circle"
+                data-open-modal="editProfile"
+                data-visible="is-current-user-page"
+              >
+                <i class="bx bxs-pencil"></i>
+              </div>
+            </div>
+            <div class="usuario-name-container">
+              <h2 class="usuario-name">Carregando..</h2>
+              <img
+                src="assets/img/badge.svg"
+                alt=""
+                data-visible="is-verified-user-page"
+              />
+            </div>
+          </div>
+          <div class="tab-menu">
+            <div class="tabs">
+              <button
+                class="tab-button"
+                data-tab-header="comments"
+                data-visible="is-user-page"
+              >
+                Comentários
+              </button>
+              <button
+                class="tab-button"
+                data-tab-header="domains"
+                data-visible="is-company-page"
+              >
+                Domínios
+              </button>
+              <button class="tab-button" data-tab-header="details">
+                Detalhes
+              </button>
+            </div>
+            <div class="tab-underline"></div>
+            <hr class="tab-divisor" />
+          </div>
+          <section class="tab-container">
+            <article data-tab="comments">
+              <div class="comments-container"></div>
+            </article>
+            <article data-tab="domains">
+              <div class="topbar">
+                <div class="buttons">
+                  <div
+                    class="button filled"
+                    data-visible="is-current-user-page"
+                    id="add-domain"
+                  >
+                    Adicionar
+                  </div>
+                </div>
+              </div>
+              <table class="grid" id="gridDominios">
+                <thead>
+                  <tr>
+                    <th>Domínio</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>⠀</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </article>
+            <article data-tab="details">
+              <h3 class="details-title" data-visible="is-company-page">
+                Sobre a empresa <span class="usuario-name">Google</span>
+              </h3>
+              <h3 class="details-title" data-visible="is-user-page">
+                Sobre o usuário <span class="usuario-name">Google</span>
+              </h3>
+              <p class="details-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
+                numquam dolores eligendi ipsam vel voluptate sequi voluptatem
+                eveniet adipisci ducimus, ex nemo quidem repellat blanditiis
+                voluptatum in illo labore veniam. Eius enim iure inventore ut
+                temporibus obcaecati odio fuga est!
+              </p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+    <footer>
+      <div class="social-media">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-facebook-circle"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-instagram-alt"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-github"></i>
+        </a>
+      </div>
+      <h2>PhishingDetector © | 2023</h2>
+      <p>support@phishingdetector.com</p>
+    </footer>
+    <div class="modal-wrapper">
+      <div class="modal" data-modal="addDomains">
+        <form id="cadDom">
+          <i class="bx bx-x modal-close-button"></i>
+          <h3 class="modal-title">Adicionar Domínio</h3>
+          <div class="modal-input-container">
+            <input
+              type="url"
+              name="dominio"
+              class="modal-input"
+              placeholder="Domínio"
+            />
+            <i class="bx bx-link modal-input-icon"></i>
+          </div>
+          <button class="button filled modal-button">Adicionar</button>
+        </form>
+      </div>
+      <div class="modal" data-modal="editProfile">
+        <form id="editProf">
+          <i class="bx bx-x modal-close-button"></i>
+          <h3 class="modal-title" style="margin-bottom: 0">Editar Perfil</h3>
+          <div class="usuario-image-container modal-usuario-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&q=80&w=1407&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="usuario-image usuario-image-edit"
+            />
+            <div class="edit-icon-container">
+              <i class="bx bxs-camera" id="cameraIcon"></i>
+            </div>
+          </div>
+          <div class="modal-input-container" data-visible="is-user-page">
+            <input
+              type="text"
+              name="nome"
+              class="modal-input usuario-name"
+              id="inputUsuarioNome"
+              style="font-size: revert; font-weight: revert; text-align: revert"
+            />
+            <label for="nome">Nome</label>
+            <i class="bx bx-link modal-input-icon"></i>
+          </div>
+          <div class="modal-input-container">
+            <textarea
+              type="text"
+              name="sobre"
+              class="details-description modal-textarea"
+              placeholder="Digite aqui.."
+            ></textarea>
+            <label for="sobre">Sobre</label>
+          </div>
+          <button class="button filled modal-button">Salvar</button>
+        </form>
+      </div>
+      <div class="modal" data-modal="editComment">
+        <form id="editCmt">
+          <i class="bx bx-x modal-close-button"></i>
+          <h3 class="modal-title">Editar Comentário</h3>
+          <div class="modal-input-container">
+            <textarea
+              type="text"
+              name="comentario"
+              id="comentario-input"
+              class="details-description modal-textarea"
+              placeholder="Digite aqui.."
+            ></textarea>
+            <label for="comentario">Comentário</label>
+          </div>
+          <button class="button filled modal-button">Salvar</button>
+        </form>
+      </div>
+      <div class="modal" data-modal="remover">
+        <form id="formRemover">
+          <h3 class="modal-title">Você tem certeza?</h3>
+          <p class="modal-description"></p>
+          <div
+            style="
+              width: 100%;
+              display: flex;
+              justify-content: space-around;
+              gap: 10px;
+            "
+          >
+            <button class="button filled modal-button" data-prompt="sim">
+              Sim
+            </button>
+            <button
+              class="button filled modal-button"
+              data-prompt="nao"
+              type="button"
+            >
+              Não
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal loading" data-modal="carregamento">
+        <img src="assets/img/loading.gif" />
+        <h3>Pescando Informações</h3>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/usuario.js"></script>
+  </body>
+</html>

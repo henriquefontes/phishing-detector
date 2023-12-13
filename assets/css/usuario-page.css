@@ -1,0 +1,89 @@
+textarea {
+  resize: none;
+}
+
+.usuario-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.usuario-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.usuario-name-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.details-title {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.details-title .usuario-name {
+  font: inherit;
+}
+
+.details-description {
+  color: white;
+}
+
+.usuario-image-edit {
+  border: 2px solid #ffffff8f;
+  width: 120px;
+  height: 120px;
+}
+
+.usuario-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-icon-circle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-70%, -40%);
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.edit-icon-container {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
