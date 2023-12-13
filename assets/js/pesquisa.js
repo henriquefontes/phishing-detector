@@ -222,7 +222,8 @@ async function carregarPagina() {
   // Define as opções da requisição HTTP
   const options = {
     method: "GET",
-    mode: "no-cors",
+    credentials: "include",
+    mode: "cors",
     headers: {
       accept: "application/json",
       "x-apikey":
