@@ -222,7 +222,6 @@ async function carregarPagina() {
   // Define as opções da requisição HTTP
   const options = {
     method: "GET",
-    credentials: "include",
     mode: "cors",
     headers: {
       accept: "application/json",
@@ -233,7 +232,7 @@ async function carregarPagina() {
 
   // Configura a URL de busca na API
   var urlBusca =
-    "https://justcors.com/tl_6428a3c/https://www.virustotal.com/api/v3/domains/" +
+    "http://cors-anywhere.herokuapp.com/https://www.virustotal.com/api/v3/domains/" +
     dominio;
 
   // Realizar a requisição Fetch
