@@ -137,12 +137,14 @@ if ($usuario && $acoesUsuario) {
 }
 
 // --- Logout ---
-const $logout = document.getElementById("logout");
+const $logout = document.querySelectorAll(".logout");
 
-if ($logout) {
-  $logout.addEventListener("click", () => {
-    sessionStorage.removeItem("usuario");
-    window.location.reload();
+if ($logout.length) {
+  $logout.forEach((el) => {
+    el.addEventListener("click", () => {
+      sessionStorage.removeItem("usuario");
+      window.location.reload();
+    });
   });
 }
 
