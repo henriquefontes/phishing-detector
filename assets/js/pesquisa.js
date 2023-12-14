@@ -233,7 +233,7 @@ async function carregarPagina() {
 
   // Configura a URL de busca na API
   var urlBusca =
-    "https://cors-anywhere.herokuapp.com/https://www.virustotal.com/api/v3/domains/" +
+    "https://cors-reverse-proxy-d1cp.onrender.com/https://www.virustotal.com/api/v3/domains/" +
     dominio;
 
   // Realizar a requisição Fetch
