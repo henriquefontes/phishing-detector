@@ -9,6 +9,25 @@ $formUrl.addEventListener("submit", (e) => {
   window.location.href = "./search.html?dominio=" + dominio;
 });
 
+async function verPost(post) {
+  abrirModal("carregamento");
+
+  const dados = await api.get("posts/" + post);
+
+  fecharModal();
+
+  const $imagem = document.getElementById("postImg");
+  const $titulo = document.getElementById("postTitle");
+  const $texto = document.getElementById("postDesc");
+
+  $imagem.src =
+    "https://www.tre-se.jus.br/imagens/fotos/tre-se-entenda-o-que-e-phishing/@@images/6b38023a-b3de-4c64-9919-d79a5a2fb34a.jpeg";
+  $titulo.innerText = dados.titulo;
+  $texto.innerText = dados.conteudo;
+
+  abrirModal("verPost");
+}
+
 function renderizarRanking(links) {
   const container = document.querySelector(".ranking-items");
 
@@ -53,7 +72,9 @@ function renderizarPosts(posts) {
               : post.conteudo
           }
         </p>
-        <button class="button filled" style="height: 35px">LER MAIS</button>
+        <button class="button filled" style="height: 35px" onclick="verPost(${
+          post.id
+        })">LER MAIS</button>
       </div>
     `;
   }
