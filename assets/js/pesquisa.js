@@ -119,7 +119,7 @@ function renderizarComentarios(comentarios) {
 async function likeDominio(id) {
   const dados = await api.get("dominios/" + id);
   const novosDados = await api.patch("dominios/" + id, {
-    likes: dados.likes + 1,
+    likes: Number(dados.likes) + 1,
   });
 
   return novosDados.likes;
@@ -128,7 +128,7 @@ async function likeDominio(id) {
 async function dislikeDominio(id) {
   const dados = await api.get("dominios/" + id);
   const novosDados = await api.patch("dominios/" + id, {
-    dislikes: dados.dislikes + 1,
+    dislikes: Number(dados.dislikes) + 1,
   });
 
   return novosDados.dislikes;
