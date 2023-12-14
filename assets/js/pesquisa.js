@@ -224,6 +224,7 @@ async function carregarPagina() {
     method: "GET",
     mode: "cors",
     headers: {
+      "Access-Control-Allow-Origin": "*",
       accept: "application/json",
       "x-apikey":
         "2c8dcd68b374477e0325b2393bb7e4077d9c99d56467ff7ef2f19e532eca7bc2",
